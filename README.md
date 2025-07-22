@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Emmanuel C. Iheme
+# Hi, I'm Emmanuel C. Iheme
 
 A data analyst passionate about using data to tell stories, drive decisions, and solve real-world problems.
 I am passionate about interepreting data under business context and data-driven business decision-making.
@@ -8,7 +8,7 @@ edX, Freecodecamp, Harvard open courseware and other MOOC platforms in subjects 
 
 ---
 
-## 🧠 About Me
+## About Me
 
 I'm skilled in analyzing and visualizing data using tools like **SQL**, **Excel**, **Power BI**, and **Python (Pandas/NumPy)**. My projects focus on transforming raw datasets into actionable insights for business impact.
 
@@ -24,7 +24,7 @@ Blogs on my own thoughts and experience in the data science fields at the blog t
 
 ---
 
-## 🧰 Skills
+## Skills
 
 - SQL • Power BI • Excel • Tableau  
 - Python (Pandas, NumPy, Regex)  
@@ -34,7 +34,7 @@ Blogs on my own thoughts and experience in the data science fields at the blog t
 
 ---
 
-## 📂 Featured Projects
+## Featured Projects
 
 ### 🔍 [SQL Exploratory Analysis](https://github.com/emmanueliheme/My-Portfolio-Projects/blob/main/Exploratory%20Data%20Analysis%20with%20Mysql.sql)
 Analyzed relational data using advanced SQL techniques including joins, subqueries, and window functions.

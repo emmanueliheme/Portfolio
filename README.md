@@ -1,6 +1,10 @@
 # 👋 Hi, I'm Emmanuel C. Iheme
 
 A data analyst passionate about using data to tell stories, drive decisions, and solve real-world problems.
+I am passionate about interepreting data under business context and data-driven business decision-making.
+
+I'm also a lifelong learner with deep curiosity. I have completed more than 10 online courses on Coursera, 
+edX, Freecodecamp, Harvard open courseware and other MOOC platforms in subjects ranging from Statistics to Machine Learning.
 
 ---
 
@@ -9,6 +13,14 @@ A data analyst passionate about using data to tell stories, drive decisions, and
 I'm skilled in analyzing and visualizing data using tools like **SQL**, **Excel**, **Power BI**, and **Python (Pandas/NumPy)**. My projects focus on transforming raw datasets into actionable insights for business impact.
 
 Currently exploring data science and machine learning to deepen my expertise and expand into predictive analytics.
+
+## About this site
+
+This site works as a gallery of my data projects as well as my own thoughts on data analysis. You will find:
+
+My Weekly Tableau Visualizations at the data viz category
+Bi-monthly Reading Notes at the reading notes category
+Blogs on my own thoughts and experience in the data science fields at the blog tag
 
 ---
 

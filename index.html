@@ -264,7 +264,7 @@ footer .wrap>div{border-top:1px solid #2C3A5C;padding-top:22px}
 
     <article class="case">
       <div>
-        <span class="status int">Prototype on synthetic data</span>
+        <span class="status live">Live · synthetic data</span>
         <h3>Enterprise Risk Assessment application</h3>
         <p>A bottom-up risk model that rolls 126 scored drivers into risk types, categories and a single enterprise score, so the headline number can always be traced back to the drivers and indicators behind it.</p>
         <p>It started as an Excel workbook. Rebuilding it in Python exposed calculation errors that inflated the score, and the app shows the reconciliation. It runs on a fictional bank, modelling the framework I'm proposing for a bank-wide assessment.</p>
@@ -440,8 +440,8 @@ df = df.drop(columns=redundant)   <em># tidy</em></pre>
   const LINKS = {
     linkedin: "",   // e.g. https://www.linkedin.com/in/your-handle
     eclDemo:  "",   // e.g. https://your-app.streamlit.app
-    eraRepo:  "",   // ERA code on GitHub
-    eraDemo:  ""    // ERA Streamlit app
+    eraRepo:  "https://github.com/emmanueliheme/enterprise-risk-assessment",
+    eraDemo:  "https://knowel-enterprise-risk-assessment.streamlit.app"
   };
   document.querySelectorAll("[data-link]").forEach(a => {
     const url = LINKS[a.dataset.link];

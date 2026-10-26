@@ -105,7 +105,7 @@ section{padding:88px 0;border-top:1px solid var(--rule)}
 .facts span{font-size:.88rem;color:var(--ink-2)}
 .case ul{margin:0 0 18px;padding-left:1.1em;max-width:var(--measure)}
 .case li{margin:.35em 0}
-.links{display:flex;gap:20px;flex-wrap:wrap;font-weight:600}
+.links{display:flex;gap:6px 20px;flex-wrap:wrap;font-weight:600}
 
 /* ---------- analytics projects ---------- */
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
@@ -164,6 +164,8 @@ footer .wrap>div{border-top:1px solid #2C3A5C;padding-top:22px}
   .contact dd{margin-bottom:12px}
 }
 [data-link-empty]{display:none !important}
+.links a,.links .soon{white-space:nowrap}
+.links .soon{color:#7C869A;font-weight:500}
 </style>
 </head>
 <body>
@@ -237,14 +239,14 @@ footer .wrap>div{border-top:1px solid #2C3A5C;padding-top:22px}
 
     <article class="case">
       <div>
-        <span class="status live">Open source</span>
+        <span class="status live">Open source · synthetic data</span>
         <h3>IFRS 9 Expected Credit Loss Engine</h3>
-        <p>A loan-level impairment engine: staging with auditable SICR triggers, lifetime PD term structures from rating migration, collateral-driven LGD, amortising and revolving EAD, and probability-weighted macro scenarios. Ships with a Streamlit dashboard and disclosure-ready Excel output.</p>
-        <p class="stack">Python, pandas, NumPy, Streamlit, Plotly, pytest (23 tests)</p>
+        <p>A loan-level impairment engine: staging with auditable SICR triggers, lifetime PD term structures from rating migration, collateral-driven LGD, amortising and revolving EAD, and probability-weighted macro scenarios, with disclosure-ready Excel output.</p>
+        <p class="stack">Python, pandas, NumPy, Streamlit, Plotly, pytest · IFRS 9</p>
         <div class="links">
-          <a href="https://github.com/emmanueliheme/ifrs9-ecl-engine">Code on GitHub</a>
-          <a href="https://github.com/emmanueliheme/ifrs9-ecl-engine/blob/main/docs/METHODOLOGY.md">Methodology</a>
-          <a data-link="eclDemo" href="">Live dashboard</a>
+          <a data-slot="eclRepo" href="">Code on GitHub</a>
+          <a data-slot="eclMethod" href="">Methodology</a>
+          <a data-slot="eclDemo" href="">Live app</a>
         </div>
       </div>
       <div>
@@ -256,7 +258,7 @@ footer .wrap>div{border-top:1px solid #2C3A5C;padding-top:22px}
         </div>
         <ul>
           <li>Every facility records which Stage 2 triggers fired: 30+ DPD, PD ratio, 3-notch downgrade, watchlist or forbearance.</li>
-          <li>Sidebar controls re-weight scenarios and move SICR thresholds live, showing how sensitive the allowance is to policy choices.</li>
+          <li>Scenario weights and SICR thresholds move live, showing how sensitive the allowance is to policy choices.</li>
           <li>Runs on any loan tape with the documented columns; the synthetic book keeps it shareable.</li>
         </ul>
       </div>
@@ -265,13 +267,13 @@ footer .wrap>div{border-top:1px solid #2C3A5C;padding-top:22px}
     <article class="case">
       <div>
         <span class="status live">Live · synthetic data</span>
-        <h3>Enterprise Risk Assessment application</h3>
-        <p>A bottom-up risk model that rolls 126 scored drivers into risk types, categories and a single enterprise score, so the headline number can always be traced back to the drivers and indicators behind it.</p>
-        <p>It started as an Excel workbook. Rebuilding it in Python exposed calculation errors that inflated the score, and the app shows the reconciliation. It runs on a fictional bank, modelling the framework I'm proposing for a bank-wide assessment.</p>
-        <p class="stack">Python, pandas, Streamlit, Plotly, pytest · Basel III, CBN Risk-Based Supervision, COSO ERM</p>
+        <h3>Enterprise Risk Assessment Model</h3>
+        <p>A bottom-up risk model that rolls 126 scored drivers into risk types, categories and one enterprise score, so the headline number traces back to the drivers and indicators behind it. Rebuilt from my Excel prototype, with a reconciliation showing what the rebuild corrected.</p>
+        <p class="stack">Python, pandas, Streamlit, Plotly, pytest · Basel III, CBN RBS, COSO ERM</p>
         <div class="links">
-          <a data-link="eraRepo" href="">Code on GitHub</a>
-          <a data-link="eraDemo" href="">Live app</a>
+          <a data-slot="eraRepo" href="">Code on GitHub</a>
+          <a data-slot="eraMethod" href="">Methodology</a>
+          <a data-slot="eraDemo" href="">Live app</a>
         </div>
       </div>
       <div>
@@ -282,7 +284,7 @@ footer .wrap>div{border-top:1px solid #2C3A5C;padding-top:22px}
           <div><strong>126</strong><span>Key risk indicators</span></div>
         </div>
         <ul>
-          <li>Worst-case impact, weighted likelihood and control effectiveness at every level, from driver to enterprise.</li>
+          <li>Weighted likelihood, worst-case impact and control effectiveness at every level, from driver to enterprise.</li>
           <li>KRIs rated in the right direction and, optionally, fed back into the scores.</li>
           <li>What-if editing and live assumptions: thresholds, weights and control effectiveness.</li>
         </ul>
@@ -293,13 +295,25 @@ footer .wrap>div{border-top:1px solid #2C3A5C;padding-top:22px}
       <div>
         <span class="status wip">In progress</span>
         <h3>Credit Risk Decision Engine</h3>
-        <p>A credit decisioning model for loan applications, built on features credit officers already reason with, so each decision comes with reasons a reviewer recognises.</p>
-        <p class="stack">Python, pandas</p>
+        <p>A credit decisioning model for loan applications, built on the features credit officers already reason with, so each decision comes with reasons a reviewer recognises.</p>
+        <p class="stack">Python, pandas · credit underwriting</p>
+        <div class="links">
+          <a data-slot="creRepo" href="">Code on GitHub</a>
+          <a data-slot="creMethod" href="">Methodology</a>
+          <a data-slot="creDemo" href="">Live app</a>
+        </div>
       </div>
       <div>
+        <div class="facts">
+          <div><strong>DSCR</strong><span>Debt service coverage ratio</span></div>
+          <div><strong>Collateral</strong><span>Coverage of exposure by security</span></div>
+          <div><strong>Delinquency</strong><span>Repayment history features</span></div>
+          <div><strong>ECL-linked</strong><span>Same borrower view as the IFRS 9 engine</span></div>
+        </div>
         <ul>
-          <li>Feature engineering from credit fundamentals: debt service coverage ratio, collateral coverage and delinquency history.</li>
-          <li>Designed to sit alongside the ECL engine: the same borrower view drives origination and provisioning.</li>
+          <li>Feature engineering from credit fundamentals rather than opaque proxies.</li>
+          <li>Designed to sit alongside the ECL engine, so origination and provisioning share one view of the borrower.</li>
+          <li>Code, methodology and live app will be published here when the first version is complete.</li>
         </ul>
       </div>
     </article>
@@ -436,13 +450,31 @@ df = df.drop(columns=redundant)   <em># tidy</em></pre>
 <footer><div class="wrap"><div>© 2026 Emmanuel C. Iheme</div></div></footer>
 
 <script>
-  /* Fill these in and every matching link appears. Empty = hidden. */
+    /* Fill in a URL and its link goes live. Empty project links show "coming soon"; an empty LinkedIn is hidden. */
   const LINKS = {
-    linkedin: "",   // e.g. https://www.linkedin.com/in/your-handle
-    eclDemo:  "",   // e.g. https://your-app.streamlit.app
-    eraRepo:  "https://github.com/emmanueliheme/enterprise-risk-assessment",
-    eraDemo:  "https://knowel-enterprise-risk-assessment.streamlit.app"
+    linkedin:  "",   // e.g. https://www.linkedin.com/in/your-handle
+    // IFRS 9 ECL engine
+    eclRepo:   "https://github.com/emmanueliheme/ifrs9-ecl-engine",
+    eclMethod: "https://github.com/emmanueliheme/ifrs9-ecl-engine/blob/main/docs/METHODOLOGY.md",
+    eclDemo:   "",   // e.g. https://your-ecl-app.streamlit.app
+    // Enterprise Risk Assessment
+    eraRepo:   "https://github.com/emmanueliheme/enterprise-risk-assessment",
+    eraMethod: "https://github.com/emmanueliheme/enterprise-risk-assessment/blob/main/docs/METHODOLOGY.md",
+    eraDemo:   "https://knowel-enterprise-risk-assessment.streamlit.app",
+    // Credit Risk Decision Engine
+    creRepo:   "",
+    creMethod: "",
+    creDemo:   ""
   };
+  document.querySelectorAll("[data-slot]").forEach(a => {
+    const url = LINKS[a.dataset.slot];
+    if (url) { a.href = url; return; }
+    const span = document.createElement("span");
+    span.className = "soon";
+    span.textContent = a.textContent + " (soon)";
+    span.title = "Not published yet";
+    a.replaceWith(span);
+  });
   document.querySelectorAll("[data-link]").forEach(a => {
     const url = LINKS[a.dataset.link];
     if (url) a.href = url; else a.setAttribute("data-link-empty", "");

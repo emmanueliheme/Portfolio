@@ -264,21 +264,27 @@ footer .wrap>div{border-top:1px solid #2C3A5C;padding-top:22px}
 
     <article class="case">
       <div>
-        <span class="status int">Internal tool · walkthrough on request</span>
+        <span class="status int">Prototype on synthetic data</span>
         <h3>Enterprise Risk Assessment application</h3>
-        <p>A Streamlit application that scores risk bottom-up through a three-level hierarchy, from unit to department to directorate, so a directorate rating can always be traced back to the drivers and indicators behind it.</p>
-        <p class="stack">Python, Streamlit, Basel III, CBN Risk-Based Supervision</p>
+        <p>A bottom-up risk model that rolls 126 scored drivers into risk types, categories and a single enterprise score, so the headline number can always be traced back to the drivers and indicators behind it.</p>
+        <p>It started as an Excel workbook. Rebuilding it in Python exposed calculation errors that inflated the score, and the app shows the reconciliation. It runs on a fictional bank, modelling the framework I'm proposing for a bank-wide assessment.</p>
+        <p class="stack">Python, pandas, Streamlit, Plotly, pytest · Basel III, CBN Risk-Based Supervision, COSO ERM</p>
+        <div class="links">
+          <a data-link="eraRepo" href="">Code on GitHub</a>
+          <a data-link="eraDemo" href="">Live app</a>
+        </div>
       </div>
       <div>
         <div class="facts">
           <div><strong>6</strong><span>Risk categories</span></div>
-          <div><strong>24</strong><span>Risk types</span></div>
+          <div><strong>26</strong><span>Risk types</span></div>
           <div><strong>126</strong><span>Risk drivers</span></div>
-          <div><strong>630+</strong><span>Key risk indicators</span></div>
+          <div><strong>126</strong><span>Key risk indicators</span></div>
         </div>
         <ul>
-          <li>Taxonomy and scoring aligned to Basel III and CBN Risk-Based Supervision.</li>
-          <li>Rolls unit assessments up to department and directorate level with a consistent method.</li>
+          <li>Worst-case impact, weighted likelihood and control effectiveness at every level, from driver to enterprise.</li>
+          <li>KRIs rated in the right direction and, optionally, fed back into the scores.</li>
+          <li>What-if editing and live assumptions: thresholds, weights and control effectiveness.</li>
         </ul>
       </div>
     </article>
@@ -405,7 +411,7 @@ df = df.drop(columns=redundant)   <em># tidy</em></pre>
       <li>
         <div class="when">In progress</div>
         <div>
-          <h3>Masters Information Management</h3>
+          <h3>MSc</h3>
           <p>Dissertation on how management information systems influence organisational performance at First Bank.</p>
         </div>
       </li>
@@ -433,7 +439,9 @@ df = df.drop(columns=redundant)   <em># tidy</em></pre>
   /* Fill these in and every matching link appears. Empty = hidden. */
   const LINKS = {
     linkedin: "",   // e.g. https://www.linkedin.com/in/your-handle
-    eclDemo:  ""    // e.g. https://your-app.streamlit.app
+    eclDemo:  "",   // e.g. https://your-app.streamlit.app
+    eraRepo:  "",   // ERA code on GitHub
+    eraDemo:  ""    // ERA Streamlit app
   };
   document.querySelectorAll("[data-link]").forEach(a => {
     const url = LINKS[a.dataset.link];
